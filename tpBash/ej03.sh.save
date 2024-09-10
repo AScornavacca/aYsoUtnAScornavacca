@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "ingrese la primer fecha (MM-DD-AAAA) "
+read fecha1
+echo "ingrese la segunda fecha(MM-DD-AAAA)"
+read fecha2
+
+fecha1_seg=$(date -d "$fecha1" +%s)
+fecha2_seg=$(date -d "$fecha2" +%s)
+
+dif_seg=$((fecha2_seg - fecha1_seg))
+dif_dia=$((dif_seg / 86400)) 
+echo $dif_dia
